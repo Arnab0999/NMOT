@@ -9,9 +9,9 @@ float trapezoidalRule(float a,float b,int n)
 {
     float h=(b-a)/n;
     float result=f(a)+f(b);
-    for(int i = 0; i < n; i++)
+    for(int i = 1; i < n; i++)
     {
-        result+=f(a+i*h);
+        result+=2*f(a+i*h);
     }
     return (h/2)*result;
 }
